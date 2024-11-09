@@ -1,3 +1,6 @@
-/*
-Custom Css
-*/
+.same-size {
+    width: 100%; /* Se ajusta al ancho del contenedor */
+    height: 300px; /* Puedes ajustar esta altura según tus necesidades */
+    object-fit: cover; /* Hace que la imagen se recorte para llenar el contenedor */
+    border-radius: 5px; /* Opcional: redondea los bordes */
+}
