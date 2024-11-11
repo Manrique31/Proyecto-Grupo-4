@@ -1,6 +1,11 @@
 .same-size {
-    width: 100%; /* Se ajusta al ancho del contenedor */
-    height: 300px; /* Puedes ajustar esta altura según tus necesidades */
-    object-fit: cover; /* Hace que la imagen se recorte para llenar el contenedor */
-    border-radius: 5px; /* Opcional: redondea los bordes */
+    width: 100%; /* Ajusta al ancho del contenedor */
+    height: 85; /* Ajusta la altura */
+    object-fit: cover; /* Aplica a imágenes si se usa */
+    border-radius: 5px; /* Redondea bordes */
+}
+.brand-img {
+    width: 100px; /* Ajusta el tamaño deseado */
+    height: 100px;
+    object-fit: contain; /* Ajusta la imagen sin distorsionarla */
 }
