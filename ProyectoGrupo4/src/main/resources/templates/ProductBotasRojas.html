@@ -1,112 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+    <head th:replace="~{layout/plantilla :: head}">
+    </head>
+    <body>
+        <!-- Remplazo Del Nav y Header  -->
+        <nav th:replace="~{layout/plantilla :: nav}"/>
+        <!-- Fin Del Remplazo  -->
 
-<head>
-    <title>Zay Shop - Product Detail Page</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/templatemo.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
-
-    <!-- Load fonts style after rendering the layout styles -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-
-    <!-- Slick -->
-    <link rel="stylesheet" type="text/css" href="assets/css/slick.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
-<!--
-    
-TemplateMo 559 Zay Shop
-
-https://templatemo.com/tm-559-zay-shop
-
--->
-</head>
-
-<body>
-    <!-- Start Top Nav -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
-        <div class="container text-light">
-            <div class="w-100 d-flex justify-content-between">
-                <div>
-                    <i class="fa fa-envelope mx-2"></i>
-                    <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@company.com">mysticDept@gmail.com</a>
-                    <i class="fa fa-phone mx-2"></i>
-                    <a class="navbar-sm-brand text-light text-decoration-none" href="tel:010-020-0340">9794-5873</a>
-                </div>
-                <div>
-                    <a class="text-light" href="https://fb.com/templatemo" target="_blank" rel="sponsored"><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
-                    <a class="text-light" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
-                    <a class="text-light" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
-                    <a class="text-light" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin fa-sm fa-fw"></i></a>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <!-- Close Top Nav -->
-
-
-    <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-light shadow">
-        <div class="container d-flex justify-content-between align-items-center">
-
-            <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
-                Mystic Dept
-            </a>
-
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
-                <div class="flex-fill">
-                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="shop.html">Shop</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="navbar align-self-center d-flex">
-                    <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
-                            <div class="input-group-text">
-                                <i class="fa fa-fw fa-search"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
-                        <i class="fa fa-fw fa-search text-dark mr-2"></i>
-                    </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
-                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
-                    </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
-                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </nav>
-    <!-- Close Header -->
 
     <!-- Modal -->
     <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -133,7 +33,7 @@ https://templatemo.com/tm-559-zay-shop
             <div class="row">
                 <div class="col-lg-5 mt-5">
                     <div class="card mb-3">
-                        <img class="card-img img-fluid" src="assets/img/Jordan.jpeg" alt="Card image cap" id="product-detail">
+                        <img class="card-img img-fluid" src="assets/img/red_boots.jpg" alt="Card image cap" id="product-detail">
                     </div>
                     <div class="row">
                         <!--Start Controls-->
@@ -150,17 +50,17 @@ https://templatemo.com/tm-559-zay-shop
                                     <div class="row">
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="assets/img/jordan1.jpg" alt="Product Image 1">
+                                                <img class="card-img img-fluid" src="assets/img/Rojo1.jpg" alt="Product Image 1">
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="assets/img/jordan2.jpg" alt="Product Image 2">
+                                                <img class="card-img img-fluid" src="assets/img/Rojo2.jpg" alt="Product Image 2">
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="assets/img/jordan3.jpg" alt="Product Image 3">
+                                                <img class="card-img img-fluid" src="assets/img/Rojo3.jpg" alt="Product Image 3">
                                             </a>
                                         </div>
                                     </div>
@@ -182,22 +82,22 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-lg-7 mt-5">
                     <div class="card">
                         <div class="card-body">
-                            <h1 class="h2">Jordan 1 "Chicago"</h1>
-                            <p class="h3 py-2">$215</p>
+                            <h1 class="h2">MSCHF Red Big Boots</h1>
+                            <p class="h3 py-2">$400</p>
                             <p class="py-2">
                                 <i class="fa fa-star text-warning"></i>
                                 <i class="fa fa-star text-warning"></i>
                                 <i class="fa fa-star text-warning"></i>
                                 <i class="fa fa-star text-warning"></i>
                                 <i class="fa fa-star text-secondary"></i>
-                                <span class="list-inline-item text-dark">Rating 5.8 | 36 Comments</span>
+                                <span class="list-inline-item text-dark">Rating 2.8 | 36 Comments</span>
                             </p>
                             <ul class="list-inline">
                                 <li class="list-inline-item">
                                     <h6>Brand:</h6>
                                 </li>
                                 <li class="list-inline-item">
-                                    <p class="text-muted"><strong>Jordan</strong></p>
+                                    <p class="text-muted"><strong>MSCHF</strong></p>
                                 </li>
                             </ul>
 
@@ -205,7 +105,7 @@ https://templatemo.com/tm-559-zay-shop
 
                             <h6>Specification:</h6>
                             <ul class="list-unstyled pb-3">
-                                <li>Las Air Jordan 1 "Chicago" son uno de los modelos más icónicos de la marca Jordan, reconocidas por su combinación de colores en rojo, blanco y negro, representando los colores de los Chicago Bulls, el equipo de Michael Jordan. Su debut fue en 1985 y fue diseñado por Peter Moore. Esta combinación de colores no solo capturó la esencia del equipo de Jordan, sino que también rompió esquemas al introducir un estilo audaz en el calzado de baloncesto.</li>
+                                <li>Las MSCHF Big Red Boots son un diseño audaz y llamativo, lanzado por el colectivo de arte MSCHF, conocido por sus innovaciones y experimentos en moda. Inspiradas en el estilo de los personajes de dibujos animados como Astro Boy, estas botas presentan un aspecto exagerado, voluminoso y caricaturesco, con un diseño de una sola pieza en color rojo intenso y un exterior de TPU, lo que las hace tanto resistentes como visualmente impactantes.</li>
                                 <li></li>
                                 <li></li>
                                 <li></li>
@@ -222,10 +122,10 @@ https://templatemo.com/tm-559-zay-shop
                                             <li class="list-inline-item">Size :
                                                 <input type="hidden" name="product-size" id="product-size" value="S">
                                             </li>
-                                            <li class="list-inline-item"><span class="btn btn-success btn-size">35</span></li>
-                                            <li class="list-inline-item"><span class="btn btn-success btn-size">38</span></li>
+                                            <li class="list-inline-item"><span class="btn btn-success btn-size">37</span></li>
                                             <li class="list-inline-item"><span class="btn btn-success btn-size">40</span></li>
-                                            <li class="list-inline-item"><span class="btn btn-success btn-size">44</span></li>
+                                            <li class="list-inline-item"><span class="btn btn-success btn-size">41</span></li>
+                                            <li class="list-inline-item"><span class="btn btn-success btn-size">42</span></li>
                                         </ul>
                                     </div>
                                     <div class="col-auto">
