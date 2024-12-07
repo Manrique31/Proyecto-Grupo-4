@@ -1,3 +1,7 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package ProyectoGrupo4.demo;
 
 
@@ -9,56 +13,57 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-public class ProjectConfig {
+/**
+ *
+ * @author tanyr
+ */
+
+public class ProjectConfig implements WebMvcConfigurer {
     
-    /* Los siguientes métodos son para implementar el tema de seguridad dentro del proyecto */
+    /* Los siguiente métodos son para implementar el tema de seguridad dentro del proyecto */
+    @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("index");
         registry.addViewController("/index").setViewName("index");
         registry.addViewController("/login").setViewName("login");
         registry.addViewController("/registro/nuevo").setViewName("/registro/nuevo");
-        // Aquí puedes agregar una vista para el segundo login si es necesario
-        registry.addViewController("/secondLogin").setViewName("secondLogin");
-    }
+ }
 
-    @Bean
+@Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests((request) -> request
-                        .requestMatchers("/", "/index", "/errores/**",
-                                "/carrito/*", "/pruebas/", "/reportes/*",
-                                "/registro/*", "/js/", "/webjars/*")
+                .requestMatchers("/","/index","/errores/**",
+                        "/carrito/**","/pruebas/**","/reportes/**",
+                        "/registro/**","/js/**","/webjars/**")
                         .permitAll()
-                        .requestMatchers(
-                                "/producto/nuevo", "/producto/guardar",
-                                "/producto/modificar/*", "/producto/eliminar/*",
-                                "/categoria/nuevo", "/categoria/guardar",
-                                "/categoria/modificar/*", "/categoria/eliminar/*",
-                                "/usuario/nuevo", "/usuario/guardar",
-                                "/usuario/modificar/*", "/usuario/eliminar/*",
-                                "/reportes/**"
-                        ).hasRole("ADMIN")
-                        .requestMatchers(
-                                "/producto/listado",
-                                "/categoria/listado",
-                                "/usuario/listado"
-                        ).hasAnyRole("ADMIN", "VENDEDOR")
-                        .requestMatchers("/facturar/carrito")
-                        .hasRole("USER")
+                .requestMatchers(
+                        "/producto/nuevo","/producto/guardar",
+                        "/producto/modificar/**","/producto/eliminar/**",
+                        "/categoria/nuevo","/categoria/guardar",
+                        "/categoria/modificar/**","/categoria/eliminar/**",
+                        "/usuario/nuevo","/usuario/guardar",
+                        "/usuario/modificar/**","/usuario/eliminar/**",
+                        "/reportes/**"
+                ).hasRole("ADMIN")
+                .requestMatchers(
+                        "/producto/listado",
+                        "/categoria/listado",
+                        "/usuario/listado"
+                ).hasAnyRole("ADMIN", "VENDEDOR")
+                .requestMatchers("/facturar/carrito")
+                .hasRole("USER")
                 )
                 .formLogin((form) -> form
-                        .loginPage("/login") // Página de login personalizada
-                        .defaultSuccessUrl("/secondLogin", true) // Redirige después del primer login
-                        .permitAll()
-                )
+                .loginPage("/login").permitAll())
                 .logout((logout) -> logout.permitAll());
-
         return http.build();
     }
 
-    /* El siguiente método se utiliza para completar la clase no es 
-    realmente funcional, la próxima semana se reemplaza con usuarios de BD */
+/* El siguiente método se utiliza para completar la clase no es 
+    realmente funcional, la próxima semana se reemplaza con usuarios de BD */    
     @Bean
     public UserDetailsService users() {
         UserDetails admin = User.builder()
@@ -79,3 +84,4 @@ public class ProjectConfig {
         return new InMemoryUserDetailsManager(user, sales, admin);
     }
 }
+

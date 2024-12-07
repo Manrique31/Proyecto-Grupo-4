@@ -4,34 +4,9 @@
     <head th:replace="~{layout/plantilla :: head}">
     </head>
     <body>
-        <!-- Remplazo Del Nav y Header -->
+        <!-- Remplazo Del Nav y Header  -->
         <nav th:replace="~{layout/plantilla :: nav}"/>
-
-        <!-- Sección de Inicio de sesión -->
-        <section class="container py-5" id="login-section">
-            <div class="row text-center pt-3">
-                <div class="col-lg-6 m-auto">
-                    <h1 class="h1">Iniciar Sesión</h1>
-                    <p>Accede a tu cuenta para comprar los productos exclusivos que tenemos para ti.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 m-auto">
-                    <form action="/login" method="POST">
-                        <div class="mb-3">
-                            <label for="username" class="form-label">Nombre de Usuario</label>
-                            <input type="text" class="form-control" id="username" name="username" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="password" name="password" required>
-                        </div>
-                        <button type="submit" class="btn btn-success w-100">Iniciar Sesión</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-        <!-- Fin Sección de Inicio de sesión -->
+        <!-- Fin Del Remplazo  -->
 
         <!-- Modal -->
         <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -50,6 +25,7 @@
             </div>
         </div>
 
+
         <!-- Inicio Banner -->
         <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
             <ol class="carousel-indicators">
@@ -63,13 +39,15 @@
                         <div class="row p-5">
                             <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
                                 <img class="img-fluid" src="./assets/img/Tienda_Logo.jpg" alt="">
+
                             </div>
                             <div class="col-lg-6 mb-0 d-flex align-items-center">
                                 <div class="text-align-left align-self-center">
-                                    <h1 class="h1 text-success"><b>Mistic</b> Dept</h1>
-                                    <h3 class="h2">"Where luxury meets your closet."</h3>
+                                    <h1 class="h1 text-success"><b>Mistic</b> Dept  </h1>
+                                    <h3 class="h2">"Where luxury meets your closet."
+                                    </h3>
                                     <p>
-                                        Nuestra tienda es el destino ideal para los amantes de los sneakers que buscan estilo y sofisticación en cada detalle...
+                                        Nuestra tienda es el destino ideal para los amantes de los sneakers que buscan estilo y sofisticación en cada detalle. Nos especializamos en una amplia variedad de sneakers de alta gama, cuidadosamente seleccionados para resaltar lo mejor de la moda urbana y de lujo. Además, ofrecemos una selección de accesorios y ropa, permitiendo a nuestros clientes encontrar todo lo necesario para complementar su estilo único. En nuestro espacio, cada pieza es un símbolo de excelencia en diseño y calidad, creada por marcas exclusivas que reflejan autenticidad y vanguardia.
                                     </p>
                                 </div>
                             </div>
@@ -86,7 +64,7 @@
                                 <div class="text-align-left">
                                     <h1 class="h1">About us</h1>
                                     <p>
-                                        Somos una tienda exclusiva especializada en moda de lujo y estilo urbano...
+                                        Somos una tienda exclusiva especializada en moda de lujo y estilo urbano. Aquí encontrarás una selección de sneakers, accesorios y ropa de las marcas más hype del momento, ideales para quienes buscan destacar y llevar lo último en tendencias. Nos enfocamos en piezas únicas y ediciones limitadas que combinan diseño y calidad, pensadas para aquellos que valoran la autenticidad y el estilo en cada detalle.
                                     </p>
                                 </div>
                             </div>
@@ -103,7 +81,7 @@
                                 <div class="text-align-left">
                                     <h1 class="h1">Fundadores</h1>           
                                     <p>
-                                        Nuestra tienda fue fundada por Manrique Torres, Didier Bolívar, Esteban Herrera y Sebastián Rodríguez...
+                                        Nuestra tienda fue fundada por Manrique Torres, Didier Bolívar, Esteban Herrera y Sebastián Rodríguez, cuatro apasionados por la moda urbana y el estilo exclusivo. Juntos han creado un espacio donde cada prenda y accesorio refleja su visión del lujo contemporáneo y el streetwear más hype. Con un enfoque en piezas únicas y de alta calidad, nuestro equipo se dedica a ofrecer una experiencia de moda que conecta autenticidad y tendencia, pensada para aquellos que buscan destacar con un estilo auténtico y exclusivo.
                                     </p>
                                 </div>
                             </div>
@@ -120,12 +98,15 @@
         </div>
         <!-- Fin Banner -->
 
+
         <!-- Inicio Categorias del mes -->
         <section class="container py-5">
             <div class="row text-center pt-3">
                 <div class="col-lg-6 m-auto">
                     <h1 class="h1">Categorias</h1>
-                    <p>Estas son algunas de las opciones de las multiples categorias que tenemos disponibles</p>
+                    <p>
+                        Estas son algunas de las opciones de las multiples categorias que tenemos disponibles
+                    </p>
                 </div>
             </div>
             <div class="row">
@@ -148,13 +129,16 @@
         </section>
         <!-- Fin Categorias del mes -->
 
+
         <!-- Inicio Producto Destacado -->
         <section class="bg-light">
             <div class="container py-5">
                 <div class="row text-center py-3">
                     <div class="col-lg-6 m-auto">
-                        <h1 class="h1">Destacado</h1>
-                        <p>Estas son algunas de las prendas, accesorios o sneakers destacadas</p>
+                        <h1 class="h1">Destacado </h1>
+                        <p>
+                            Estas son algunas de las prendas,accesorios o sneakers destacadas
+                        </p>
                     </div>
                 </div>
                 <div class="row">
@@ -165,30 +149,69 @@
                             </a>
                             <div class="card-body">
                                 <ul class="list-unstyled d-flex justify-content-between">
-                                    <li><i class="text-warning fa fa-star"></i><i class="text-warning fa fa-star"></i><i class="text-warning fa fa-star"></i><i class="text-warning fa fa-star"></i><i class="text-muted fa fa-star"></i></li>
+                                    <li>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-muted fa fa-star"></i>
+
+                                    </li>
                                     <li class="text-muted text-right">₡ 37.995,00</li>
                                 </ul>
-                                <a href="ProductHooded" class="h2 text-decoration-none text-dark">Hooded</a>
+                                <a href="ProductHooded" class="h2 text-decoration-none text-dark">Hooded Sweatshirt</a>
                                 <p class="card-text">
-                                    <a href="ProductHooded" class="btn btn-outline-success">Ver Más</a>
+                                    Sudadera de vellón con capucha, para hombre 
                                 </p>
+                                <p class="text-muted">Reviews (24)</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-md-4 mb-4">
                         <div class="card h-100">
-                            <a href="ProductNike">
-                                <img src="./assets/img/nikeproduct.webp" class="card-img-top" alt="...">
+                            <a href="ProductRicks">
+                                <img src="./assets/img/ricks.jpg" class="card-img-top" alt="...">
                             </a>
                             <div class="card-body">
                                 <ul class="list-unstyled d-flex justify-content-between">
-                                    <li><i class="text-warning fa fa-star"></i><i class="text-warning fa fa-star"></i><i class="text-warning fa fa-star"></i><i class="text-warning fa fa-star"></i><i class="text-muted fa fa-star"></i></li>
-                                    <li class="text-muted text-right">₡ 29.995,00</li>
+                                    <li>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-muted fa fa-star"></i>
+                                    </li>
+                                    <li class="text-muted text-right">$480.00</li>
                                 </ul>
-                                <a href="ProductNike" class="h2 text-decoration-none text-dark">Nike Sneakers</a>
+                                <a href="ProductRicks" class="h2 text-decoration-none text-dark">Ricks Owens</a>
                                 <p class="card-text">
-                                    <a href="ProductNike" class="btn btn-outline-success">Ver Más</a>
+                                    Zapatillas vintage de Rick Owens en piel mousse
                                 </p>
+                                <p class="text-muted">Reviews (48)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="card h-100">
+                            <a href="ProductDunks">
+                                <img src="./assets/img/Dunks_Unc.jpeg" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body">
+                                <ul class="list-unstyled d-flex justify-content-between">
+                                    <li>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                    </li>
+                                    <li class="text-muted text-right">$360.00</li>
+                                </ul>
+                                <a href="ProductDunks" class="h2 text-decoration-none text-dark">Nike Dunk Low</a>
+                                <p class="card-text">
+                                    Las Nike Dunk Low UNC están hechas con una parte superior de cuero blanco, superposiciones en azul universitario y el logo de Swoosh.
+                                </p>
+                                <p class="text-muted">Reviews (74)</p>
                             </div>
                         </div>
                     </div>
