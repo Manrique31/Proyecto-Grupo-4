@@ -1,8 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package ProyectoGrupo4.demo.domain;
+
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -15,10 +12,6 @@ import java.io.Serializable;
 import java.util.List;
 import javax.validation.constraints.NotEmpty;
 import lombok.Data;
-
-
-
-
 
 @Entity
 @Data

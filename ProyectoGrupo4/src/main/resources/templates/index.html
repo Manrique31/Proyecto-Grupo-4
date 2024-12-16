@@ -1,230 +1,141 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      xmlns="http://www.w3.org/1999/xhtml">
-    <head th:replace="~{layout/plantilla :: head}">
-    </head>
-    <body>
-        <!-- Remplazo Del Nav y Header  -->
-        <nav th:replace="~{layout/plantilla :: nav}"/>
-        <!-- Fin Del Remplazo  -->
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head th:replace="~{layout/plantilla :: head}"></head>
+<body>
+    <!-- Remplazo del Nav y Header -->
+    <nav th:replace="~{layout/plantilla :: nav}"></nav>
+    <!-- Fin del Remplazo -->
 
-        <!-- Modal -->
-        <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="w-100 pt-1 mb-5 text-right">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <form action="" method="get" class="modal-content modal-body border-0 p-0">
-                    <div class="input-group mb-2">
-                        <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
-                            <button type="submit" class="input-group-text bg-success text-light">
-                                <i class="fa fa-fw fa-search text-white"></i>
-                            </button>
-                    </div>
-                </form>
+    <!-- Modal -->
+    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="w-100 pt-1 mb-5 text-right">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <form action="" method="get" class="modal-content modal-body border-0 p-0">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                    <button type="submit" class="input-group-text bg-success text-light">
+                        <i class="fa fa-fw fa-search text-white"></i>
+                    </button>
+                </div>
+            </form>
         </div>
+    </div>
 
-
-        <!-- Inicio Banner -->
-        <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="0" class="active"></li>
-                <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="1"></li>
-                <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="container">
-                        <div class="row p-5">
-                            <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                                <img class="img-fluid" src="./assets/img/Tienda_Logo.jpg" alt="">
-
-                            </div>
-                            <div class="col-lg-6 mb-0 d-flex align-items-center">
-                                <div class="text-align-left align-self-center">
-                                    <h1 class="h1 text-success"><b>Mistic</b> Dept  </h1>
-                                    <h3 class="h2">"Where luxury meets your closet."
-                                    </h3>
-                                    <p>
-                                        Nuestra tienda es el destino ideal para los amantes de los sneakers que buscan estilo y sofisticación en cada detalle. Nos especializamos en una amplia variedad de sneakers de alta gama, cuidadosamente seleccionados para resaltar lo mejor de la moda urbana y de lujo. Además, ofrecemos una selección de accesorios y ropa, permitiendo a nuestros clientes encontrar todo lo necesario para complementar su estilo único. En nuestro espacio, cada pieza es un símbolo de excelencia en diseño y calidad, creada por marcas exclusivas que reflejan autenticidad y vanguardia.
-                                    </p>
-                                </div>
-                            </div>
+    <!-- Inicio Banner -->
+    <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="1"></li>
+            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="row p-5">
+                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                            <img class="img-fluid" th:src="@{/assets/img/Tienda_Logo.jpg}" alt="Logo">
                         </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="container">
-                        <div class="row p-5">
-                            <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                                <img class="img-fluid" src="./assets/img/shopImg.jpg" alt="">
-                            </div>
-                            <div class="col-lg-6 mb-0 d-flex align-items-center">
-                                <div class="text-align-left">
-                                    <h1 class="h1">About us</h1>
-                                    <p>
-                                        Somos una tienda exclusiva especializada en moda de lujo y estilo urbano. Aquí encontrarás una selección de sneakers, accesorios y ropa de las marcas más hype del momento, ideales para quienes buscan destacar y llevar lo último en tendencias. Nos enfocamos en piezas únicas y ediciones limitadas que combinan diseño y calidad, pensadas para aquellos que valoran la autenticidad y el estilo en cada detalle.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="container">
-                        <div class="row p-5">
-                            <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                                <img class="img-fluid" src="./assets/img/Fundadores.webp" alt="">
-                            </div>
-                            <div class="col-lg-6 mb-0 d-flex align-items-center">
-                                <div class="text-align-left">
-                                    <h1 class="h1">Fundadores</h1>           
-                                    <p>
-                                        Nuestra tienda fue fundada por Manrique Torres, Didier Bolívar y Sebastián Rodríguez, cuatro apasionados por la moda urbana y el estilo exclusivo. Juntos han creado un espacio donde cada prenda y accesorio refleja su visión del lujo contemporáneo y el streetwear más hype. Con un enfoque en piezas únicas y de alta calidad, nuestro equipo se dedica a ofrecer una experiencia de moda que conecta autenticidad y tendencia, pensada para aquellos que buscan destacar con un estilo auténtico y exclusivo.
-                                    </p>
-                                </div>
+                        <div class="col-lg-6 mb-0 d-flex align-items-center">
+                            <div class="text-align-left align-self-center">
+                                <h1 class="h1 text-success"><b>Mistic</b> Dept</h1>
+                                <h3 class="h2">"Where luxury meets your closet."</h3>
+                                <p>
+                                    Nuestra tienda es el destino ideal para los amantes de los sneakers que buscan estilo y sofisticación en cada detalle. Nos especializamos en una amplia variedad de sneakers de alta gama, cuidadosamente seleccionados para resaltar lo mejor de la moda urbana y de lujo. Además, ofrecemos una selección de accesorios y ropa, permitiendo a nuestros clientes encontrar todo lo necesario para complementar su estilo único.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev text-decoration-none w-auto ps-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev">
-                <i class="fas fa-chevron-left"></i>
-            </a>
-            <a class="carousel-control-next text-decoration-none w-auto pe-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="next">
-                <i class="fas fa-chevron-right"></i>
-            </a>
+            <!-- Repetición de items del carrusel (siguen los mismos elementos de "About us" y "Fundadores") -->
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row p-5">
+                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                            <img class="img-fluid" th:src="@{/assets/img/shopImg.jpg}" alt="Shop">
+                        </div>
+                        <div class="col-lg-6 mb-0 d-flex align-items-center">
+                            <div class="text-align-left">
+                                <h1 class="h1">About us</h1>
+                                <p>
+                                    Somos una tienda exclusiva especializada en moda de lujo y estilo urbano. Aquí encontrarás una selección de sneakers, accesorios y ropa de las marcas más hype del momento.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- Fin Banner -->
+        <a class="carousel-control-prev text-decoration-none w-auto ps-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev">
+            <i class="fas fa-chevron-left"></i>
+        </a>
+        <a class="carousel-control-next text-decoration-none w-auto pe-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="next">
+            <i class="fas fa-chevron-right"></i>
+        </a>
+    </div>
+    <!-- Fin Banner -->
 
+    <!-- Inicio Categorías del mes -->
+    <section class="container py-5">
+        <div class="row text-center pt-3">
+            <div class="col-lg-6 m-auto">
+                <h1 class="h1">Categorías</h1>
+                <p>Estas son algunas de las opciones de las múltiples categorías que tenemos disponibles.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4 p-5 mt-3">
+                <a th:href="@{/clothing}"><img th:src="@{/assets/img/roparopa.jpeg}" class="rounded-circle img-fluid border" alt="Clothing"></a>
+                <h5 class="text-center mt-3 mb-3">Clothing</h5>
+                <p class="text-center"><a th:href="@{/clothing}" class="btn btn-success">Go Shop</a></p>
+            </div>
+            <!-- Repetición para Sneakers y Accesorios -->
+        </div>
+    </section>
+    <!-- Fin Categorías del mes -->
 
-        <!-- Inicio Categorias del mes -->
-        <section class="container py-5">
-            <div class="row text-center pt-3">
+    <!-- Inicio Producto Destacado -->
+    <section class="bg-light">
+        <div class="container py-5">
+            <div class="row text-center py-3">
                 <div class="col-lg-6 m-auto">
-                    <h1 class="h1">Categorias</h1>
-                    <p>
-                        Estas son algunas de las opciones de las multiples categorias que tenemos disponibles
-                    </p>
+                    <h1 class="h1">Destacado</h1>
+                    <p>Estas son algunas de las prendas, accesorios o sneakers destacadas.</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-md-4 p-5 mt-3">
-                    <a href="clothing"><img src="./assets/img/roparopa.jpeg" class="rounded-circle img-fluid border"></a>
-                    <h5 class="text-center mt-3 mb-3">Clothing</h5>
-                    <p class="text-center"><a href="clothing" class="btn btn-success">Go Shop</a></p>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card h-100">
+                        <a th:href="@{/ProductHooded}">
+                            <img th:src="@{/assets/img/CatHoodie.webp}" class="card-img-top" alt="Hoodie">
+                        </a>
+                        <div class="card-body">
+                            <ul class="list-unstyled d-flex justify-content-between">
+                                <li>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-muted fa fa-star"></i>
+                                </li>
+                                <li class="text-muted text-right">₡ 37.995,00</li>
+                            </ul>
+                            <a th:href="@{/ProductHooded}" class="h2 text-decoration-none text-dark">Hooded Sweatshirt</a>
+                            <p class="card-text">Sudadera de vellón con capucha, para hombre.</p>
+                            <p class="text-muted">Reviews (24)</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 col-md-4 p-5 mt-3">
-                    <a href="sneakers"><img src="./assets/img/tenistenis.jpg" class="rounded-circle img-fluid border"></a>
-                    <h2 class="h5 text-center mt-3 mb-3">Sneakers</h2>
-                    <p class="text-center"><a href="sneakers" class="btn btn-success">Go Shop</a></p>
-                </div>
-                <div class="col-12 col-md-4 p-5 mt-3">
-                    <a href="accesorios" ><img src="./assets/img/accesoriosk.jpeg" class="rounded-circle img-fluid border"></a>
-                    <h2 class="h5 text-center mt-3 mb-3">Accesorios</h2>
-                    <p class="text-center"><a href="accesorios" class="btn btn-success">Go Shop</a></p>
-                </div>
+                <!-- Repetición para otros productos destacados -->
             </div>
-        </section>
-        <!-- Fin Categorias del mes -->
+        </div>
+    </section>
+    <!-- Fin Producto Destacado -->
 
-
-        <!-- Inicio Producto Destacado -->
-        <section class="bg-light">
-            <div class="container py-5">
-                <div class="row text-center py-3">
-                    <div class="col-lg-6 m-auto">
-                        <h1 class="h1">Destacado </h1>
-                        <p>
-                            Estas son algunas de las prendas,accesorios o sneakers destacadas
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-4 mb-4">
-                        <div class="card h-100">
-                            <a href="ProductHooded">
-                                <img src="./assets/img/CatHoodie.webp" class="card-img-top" alt="...">
-                            </a>
-                            <div class="card-body">
-                                <ul class="list-unstyled d-flex justify-content-between">
-                                    <li>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-
-                                    </li>
-                                    <li class="text-muted text-right">₡ 37.995,00</li>
-                                </ul>
-                                <a href="ProductHooded" class="h2 text-decoration-none text-dark">Hooded Sweatshirt</a>
-                                <p class="card-text">
-                                    Sudadera de vellón con capucha, para hombre 
-                                </p>
-                                <p class="text-muted">Reviews (24)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 mb-4">
-                        <div class="card h-100">
-                            <a href="ProductRicks">
-                                <img src="./assets/img/ricks.jpg" class="card-img-top" alt="...">
-                            </a>
-                            <div class="card-body">
-                                <ul class="list-unstyled d-flex justify-content-between">
-                                    <li>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                    </li>
-                                    <li class="text-muted text-right">$480.00</li>
-                                </ul>
-                                <a href="ProductRicks" class="h2 text-decoration-none text-dark">Ricks Owens</a>
-                                <p class="card-text">
-                                    Zapatillas vintage de Rick Owens en piel mousse
-                                </p>
-                                <p class="text-muted">Reviews (48)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 mb-4">
-                        <div class="card h-100">
-                            <a href="ProductDunks">
-                                <img src="./assets/img/Dunks_Unc.jpeg" class="card-img-top" alt="...">
-                            </a>
-                            <div class="card-body">
-                                <ul class="list-unstyled d-flex justify-content-between">
-                                    <li>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                    </li>
-                                    <li class="text-muted text-right">$360.00</li>
-                                </ul>
-                                <a href="ProductDunks" class="h2 text-decoration-none text-dark">Nike Dunk Low</a>
-                                <p class="card-text">
-                                    Las Nike Dunk Low UNC están hechas con una parte superior de cuero blanco, superposiciones en azul universitario y el logo de Swoosh.
-                                </p>
-                                <p class="text-muted">Reviews (74)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Fin Producto Destacado -->
-
-
-        <!-- inicio Footer -->
-        <footer th:replace="~{layout/plantilla :: footer}"/>  
-        <!-- Fin Footer -->
-
-    </body>
-
+    <!-- Inicio Footer -->
+    <footer th:replace="~{layout/plantilla :: footer}"></footer>
+    <!-- Fin Footer -->
+</body>
 </html>
