@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head th:fragment="head">
+        <title> Mistic Dept </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/Logo.jpeg">
+
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/templatemo.css">
+        <link rel="stylesheet" href="assets/css/custom.css">
+
+        <!-- Load fonts style after rendering the layout styles -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+        <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+
+        <!-- Slick -->
+        <link rel="stylesheet" type="text/css" href="assets/css/slick.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
+        <script src="assets/js/jquery-1.11.0.min.js"></script>
+        <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/templatemo.js"></script>
+        <script src="assets/js/custom.js"></script>
+        <!-- End Script -->
+
+        <!-- Start Slider Script -->
+        <script src="assets/js/slick.min.js"></script>
+    </head>
+
+    <body>
+
+        <!-- Arriba en Nav -->
+        <nav th:fragment="nav" class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
+            <div class="container text-light">
+                <div class="w-100 d-flex justify-content-between">
+                    <div>
+                        <i class="fa fa-envelope mx-2"></i>
+                        <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:mysticDept@gmail.com">mysticDept@gmail.com</a>
+                        <i class="fa fa-phone mx-2"></i>
+                        <a class="navbar-sm-brand text-light text-decoration-none" href="tel:+50697945873">9794-5873</a>
+                    </div>
+                    <div>
+                        <a class="text-light" href="https://fb.com/" target="_blank" rel="sponsored"><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
+                        <a class="text-light" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
+                        <a class="text-light" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
+                        <a class="text-light" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin fa-sm fa-fw"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Cierra el Nav -->
+
+        <!-- Header -->
+        <nav class="navbar navbar-expand-lg navbar-light shadow">
+            <div class="container d-flex justify-content-between align-items-center">
+                <a class="navbar-brand text-success logo h1 align-self-center" href="index">
+                    Mistic Dept
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                    <div class="flex-fill">
+                        <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" th:href="index">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" th:href="sneakers">Sneakers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" th:href="accesorios">Accesorios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" th:href="clothing">Clothing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" th:href="productos">Productos</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navbar align-self-center d-flex">
+                        <a class="nav-icon position-relative text-decoration-none" href="#">
+                            <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                            <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
+                        </a>
+                        <a class="nav-icon position-relative text-decoration-none" href="#">
+                            <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                            <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Close Header -->
+
+        <!-- Sección de Productos -->
+        <div class="container mt-5">
+            <h2 class="text-center">Productos Disponibles</h2>
+
+            <!-- Listado de Productos -->
+            <div class="row mt-4">
+                <!-- Producto 1: Balenciaga Boots -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Balenciaga Boots</h5>
+                            <p class="card-text">Un par de botas Balenciaga para complementar tu estilo.</p>
+                            <p class="text-end"><strong>$800.00</strong></p>
+                            <a href="#" class="btn btn-primary">Ver más</a>
+                            <div class="d-flex justify-content-between mt-3">
+                                <a href="#" class="btn btn-success">Guardar</a>
+                                <a href="#" class="btn btn-warning">Editar</a>
+                                <a href="#" class="btn btn-danger">Eliminar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 2: Rick Owens DRKSHDW -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Rick Owens DRKSHDW</h5>
+                            <p class="card-text">Un diseño único de la marca Rick Owens.</p>
+                            <p class="text-end"><strong>$1,200.00</strong></p>
+                            <a href="#" class="btn btn-primary">Ver más</a>
+                            <div class="d-flex justify-content-between mt-3">
+                                <a href="#" class="btn btn-success">Guardar</a>
+                                <a href="#" class="btn btn-warning">Editar</a>
+                                <a href="#" class="btn btn-danger">Eliminar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3: Bolso Prada -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Bolso Prada</h5>
+                            <p class="card-text">Un bolso elegante de la marca Prada para cualquier ocasión.</p>
+                            <p class="text-end"><strong>$500.00</strong></p>
+                            <a href="#" class="btn btn-primary">Ver más</a>
+                            <div class="d-flex justify-content-between mt-3">
+                                <a href="#" class="btn btn-success">Guardar</a>
+                                <a href="#" class="btn btn-warning">Editar</a>
+                                <a href="#" class="btn btn-danger">Eliminar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 4: Apple Watch Ultra -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Apple Watch Ultra</h5>
+                            <p class="card-text">El smartwatch de Apple para actividades extremas.</p>
+                            <p class="text-end"><strong>$799.00</strong></p>
+                            <a href="#" class="btn btn-primary">Ver más</a>
+                            <div class="d-flex justify-content-between mt-3">
+                                <a href="#" class="btn btn-success">Guardar</a>
+                                <a href="#" class="btn btn-warning">Editar</a>
+                                <a href="#" class="btn btn-danger">Eliminar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 5: Jordan 1 Chicago -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Jordan 1 Chicago</h5>
+                            <p class="card-text">Las zapatillas clásicas de Jordan con el diseño Chicago.</p>
+                            <p class="text-end"><strong>$1,100.00</strong></p>
+                            <a href="#" class="btn btn-primary">Ver más</a>
+                            <div class="d-flex justify-content-between mt-3">
+                                <a href="#" class="btn btn-success">Guardar</a>
+                                <a href="#" class="btn btn-warning">Editar</a>
+                                <a href="#" class="btn btn-danger">Eliminar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 6: Hoodie Fleece -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Hoodie Fleece</h5>
+                            <p class="card-text">Confortable hoodie fleece ideal para el invierno.</p>
+                            <p class="text-end"><strong>$120.00</strong></p>
+                            <a href="#" class="btn btn-primary">Ver más</a>
+                            <div class="d-flex justify-content-between mt-3">
+                                <a href="#" class="btn btn-success">Guardar</a>
+                                <a href="#" class="btn btn-warning">Editar</a>
+                                <a href="#" class="btn btn-danger">Eliminar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-light text-center py-4">
+            <p>&copy; 2024 Mistic Dept - Todos los derechos reservados.</p>
+        </footer>
+
+    </body>
+</html>
